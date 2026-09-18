@@ -1,0 +1,120 @@
+:root {
+  --sky-top: #4fb3e8;
+  --sky-bottom: #b9e6ff;
+  --ground: #8a5a34;
+  --ink: #1c2430;
+  --paper: #fff9ee;
+  --accent: #ef5b3c;
+  --accent-dark: #c2401f;
+  --coin: #ffc94a;
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #2a3a52, #10151f 70%);
+  color: var(--paper);
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+}
+
+.hud {
+  display: flex;
+  gap: 28px;
+  padding: 10px 22px;
+  background: var(--ink);
+  border-radius: 999px;
+  box-shadow: 0 6px 0 #0009;
+}
+
+.hud-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.hud-label {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #9fb0c6;
+}
+
+.hud-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--coin);
+}
+
+canvas {
+  border-radius: 14px;
+  box-shadow: 0 14px 0 #0006, 0 0 0 6px #0c1118;
+  background: linear-gradient(var(--sky-top), var(--sky-bottom));
+  image-rendering: pixelated;
+  max-width: 92vw;
+  height: auto;
+}
+
+.hint {
+  margin: 0;
+  font-size: 14px;
+  color: #c4d2e3;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #0c1118e6;
+  text-align: center;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay h1 {
+  font-size: 40px;
+  margin: 0;
+  color: var(--coin);
+}
+
+.overlay p {
+  margin: 0;
+  color: #c4d2e3;
+}
+
+.overlay button {
+  margin-top: 10px;
+  padding: 10px 26px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--paper);
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--accent-dark);
+}
+
+.overlay button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--accent-dark);
+}

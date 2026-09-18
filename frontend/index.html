@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jogoMario</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <header class="hud">
+        <div class="hud-item">
+          <span class="hud-label">Moedas</span>
+          <span id="coins" class="hud-value">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Vidas</span>
+          <span id="lives" class="hud-value">3</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Fase</span>
+          <span id="level" class="hud-value">1</span>
+        </div>
+      </header>
+
+      <canvas id="game" width="896" height="504"></canvas>
+
+      <p class="hint">Setas / A D para mover · Espaço ou W para pular</p>
+
+      <div id="overlay" class="overlay hidden">
+        <h1 id="overlay-title">Você venceu!</h1>
+        <p id="overlay-text">Chegou até a bandeira.</p>
+        <button id="restart">Jogar novamente</button>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
